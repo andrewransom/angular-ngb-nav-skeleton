@@ -1,0 +1,31 @@
+<nav class="navbar navbar-dark navbar-expand-md bg-dark">
+
+    <a class="navbar-brand" routerLink="">
+      <i class="fas fa-lightbulb"></i>
+      ScrAtCh!!
+    </a>
+  
+    <button class="navbar-toggler" type="button" data-toggle="collapse" (click)="toggleCollapsed()">
+      <i class="fas fa-bars"></i>
+    </button>
+  
+  
+  
+    <div class="collapse navbar-collapse justify-content-between" [ngbCollapse]="isNavbarCollapsed">
+      <ul class="navbar-nav">
+        <li *ngFor="let navRoute of routeList" class="nav-item">
+          <a class="nav-link" [routerLink]="navRoute.path">{{navRoute.data.navTitle}}</a>
+        </li>
+      </ul>
+  
+      <div class="input-group col-md-4">
+          <input type="search" class="form-control" placeholder="search" aria-label="Input group example" aria-describedby="btnGroupAddon">
+          <div class="input-group-append">
+              <div class="input-group-text" id="btnGroupAddon">
+                <i class="fas fa-search"></i>
+              </div>
+            </div>        
+        </div>
+  
+    </div>
+  </nav>
